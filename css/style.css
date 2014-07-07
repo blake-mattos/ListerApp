@@ -1,3 +1,7 @@
+* {
+  border: 1px solid #fff;
+}
+
 #bg {
   position: fixed;
   top: -50%;
@@ -20,7 +24,15 @@
 
 .logo-container{
 width: 100%;
-margin-top: 100px;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+.main-wrapper {
+  min-width: 600px;
+  margin: auto;
 }
 
 .logo {
@@ -29,5 +41,24 @@ margin-top: 100px;
   display: block;
   width: 200px;
   height: auto;
+}
 
+/* Form Styles */
+textarea:focus, input:focus {
+/*  border: 2px solid #900;*/
+  outline: 1px solid #000;
+}
+
+.form-wrapper{
+margin: 50px;
+}
+
+.add-item-wrapper { 
+width: 100%;
+}
+
+.add-item { 
+  width: 320px;
+  line-height: 30px;
+  padding: 50px;
 }
