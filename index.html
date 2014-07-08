@@ -3,17 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ListerApp</title>
-</head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+  </head>
 <body>	
-	<div id="main">
-	<form action="" id="form">
-		<input type="text" id="input" />
-		<input type="submit" value="add this" id="add-button" />
-		</form>
-		<ul id="list">
-			<li class="item"></li>
-		</ul>
-	</div> 
+
+<div id="main">
+    <input type="text" id="input" />
+    <button id="add-button">duh</button>
+    <ul id="list">
+        <li class="item">
+            <button class='delete'>-</button>
+            <div class="wrapper">
+                <input type="text" value="Eggsample" class="entered" />
+                <button class='purchased'>ok</button>
+            </div>
+        </li>
+    </ul>
+</div>
 	<script src='js/jquery-2.1.1.min.js'></script>
 <script src="js/app.js"></script>
 </body>

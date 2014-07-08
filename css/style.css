@@ -1,4 +1,4 @@
-* {
+/* * {
   border: 1px solid #fff;
 }
 
@@ -43,9 +43,9 @@ width: 100%;
   height: auto;
 }
 
-/* Form Styles */
+
+
 textarea:focus, input:focus {
-/*  border: 2px solid #900;*/
   outline: 1px solid #000;
 }
 
@@ -61,4 +61,115 @@ width: 100%;
   width: 320px;
   line-height: 30px;
   padding: 50px;
+} */
+
+@font-face {
+    font-family:FontAwesome;
+    src: url(https://netdna.bootstrapcdn.com/font-awesome/2.0/font//fontawesome-webfont.eot?#iefix) format('eot'), url(https://netdna.bootstrapcdn.com/font-awesome/2.0/font//fontawesome-webfont.woff) format('woff'), url(https://netdna.bootstrapcdn.com/font-awesome/2.0/font//fontawesome-webfont.ttf) format('truetype'), url(https://netdna.bootstrapcdn.com/font-awesome/2.0/font//fontawesome-webfont.svg#FontAwesome) format('svg');
+    font-weight:400;
+    font-style:normal;
 }
+
+/* Delete Icon */
+p1:before {
+    font-family:'FontAwesome';
+    content:"\f056";
+    padding:5px;
+}
+
+/* Check Icon */
+p2:before {
+    font-family:'FontAwesome';
+    content:"\f00c";
+    padding:5px;
+}
+
+
+*:focus {
+    outline: none
+}
+
+button {
+    font-size: 36px;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+input[type="text"] {
+    font-size: 36px;
+    color: rgba(255, 255, 255, .8);
+
+}
+
+input[type="text"].entered {
+    border:none;
+    width: 300px;
+    background-color: transparent;
+    padding:20px 30px;
+    height: 80px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+input[type="text"].focus {
+    width: 320px;
+    background-color: rgba(0, 0, 0, .7);
+    color: rgba(255, 255, 255, 1);
+}
+.wrapper {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .7);
+}
+.item {
+    margin: 10px 0;
+}
+
+.delete, .purchased  {
+    background: none;
+    border: 0;
+    padding: 40px;
+    margin: 0;
+    }
+
+.delete {
+    padding: 30px 15px;
+}
+
+.purchased {
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        color: rgba(0, 0, 0, .6);
+
+}
+
+.purchased:hover {
+    background-color: rgba(255, 255, 255, .1);
+    color: rgba(0, 0, 0, .8);
+}
+
+.purchased:active {
+    background-color: rgba(255, 255, 255, .6);
+    color: #000;
+}
+
+.done {
+    background-color: rgba(0, 0, 0, .3);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.blue {
+    color: blue;
+}
+
+/*
+.delete, .purchased {
+  display: none;
+}*/

@@ -1,8 +1,43 @@
-$( "#target" ).submit(function( event ) {
-    var grocery = $('#input').val();
-  $('#list').append("<li class='item'><button class='delete'>-</button>"+grocery+"<button class='purchased'>ok</button></li>");
+$(document).ready(function(){
+
+  $('#main').on('click', '#add-button', function () {
+        var grocery = $('#input').val();
+        $('#list').append("<li class='item'><button class='delete'><p1></p1></button><div class='wrapper'><input type='text' value='" + grocery + "' class='entered'/><button class='purchased'><p2></p2></button></div></li>");
+    });
+
+    $('#list').on('focus', 'input[type="text"].entered', function () {
+        $(this).addClass('focus');
+    }).on('blur', 'input[type="text"].entered', function () {
+        $(this).removeClass('focus');
+    });
+
+    $("#list").on('click', '.delete', function () {
+        $(this).parent().fadeOut('slow', function () {
+            $(this).remove();
+        });
+    });
+
+    $("#list").on('click', '.purchased', function () {
+        $(this).parent().toggleClass('done');
+        $('input[type="text"].entered').toggleClass('blue');
+    });
+
+/*
+$(".item").mouseenter(function () {
+    $(this).children(".delete").show();
 });
-    
+
+$(".item").mouseleave(function () {
+    $(this).children(".delete").hide();
+});
+
+$(".wrapper").mouseenter(function(){
+    $(this).children('.purchased').show();
+});
+
+$(".wrapper").mouseleave(function(){
+    $(this).children('.purchased').hide();
+}); */
 
 //Background Randomizer
 var $backgroundContainer = $("#bg"), // target container for bg image
@@ -21,3 +56,4 @@ var $backgroundContainer = $("#bg"), // target container for bg image
 
     $backgroundContainer.html(newImage); // apply the image
 
+});
