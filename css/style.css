@@ -128,7 +128,7 @@ input[type="text"].entered {
 }
 input[type="text"].focus {
     width: 320px;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .5);
     color: rgba(255, 255, 255, 1);
 }
 .wrapper {
