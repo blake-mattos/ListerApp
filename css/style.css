@@ -1,6 +1,6 @@
 /* * {
-  border: 1px solid #fff;
-}
+  border: 1px solid pink;
+} */
 
 #bg {
   position: fixed;
@@ -8,7 +8,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  z-index: -1;
+  z-index: -10;
 }
 
 #bg img {
@@ -26,6 +26,16 @@
 width: 100%;
 }
 
+.logo {
+margin: 30px auto;
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+
+
+/*
 .main {
     margin-top: 100px;
 }
@@ -35,13 +45,7 @@ width: 100%;
   margin: auto;
 }
 
-.logo {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 200px;
-  height: auto;
-}
+
 
 
 
@@ -75,7 +79,9 @@ p1:before {
     font-family:'FontAwesome';
     content:"\f056";
     padding:5px;
+    color: rgba(0,0,0,.8);
 }
+
 
 /* Check Icon */
 p2:before {
@@ -95,7 +101,7 @@ button {
 
 ul, menu, dir {
     display: block;
-    list-style-type: disc;
+    list-style-type: none;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
@@ -105,16 +111,18 @@ ul, menu, dir {
 
 input[type="text"] {
     font-size: 36px;
-    color: rgba(255, 255, 255, .8);
+        width: 300px;
+            height: 80px;
 
 }
 
 input[type="text"].entered {
     border:none;
-    width: 300px;
+
     background-color: transparent;
     padding:20px 30px;
-    height: 80px;
+        color: rgba(255, 255, 255, .8);
+
     -webkit-transition: all .5s;
     transition: all .5s;
 }
@@ -128,7 +136,7 @@ input[type="text"].focus {
     background-color: rgba(0, 0, 0, .7);
 }
 .item {
-    margin: 10px 0;
+    margin: 10px 5px;
 }
 
 .delete, .purchased  {
@@ -139,14 +147,17 @@ input[type="text"].focus {
     }
 
 .delete {
-    padding: 30px 15px;
+/*    padding: 40px 20px; */
+}
+
+.delete:hover {
+      background-color: rgba(0,0,0,.2);
 }
 
 .purchased {
         -webkit-transition: all .2s;
         transition: all .2s;
         color: rgba(0, 0, 0, .6);
-
 }
 
 .purchased:hover {
@@ -160,14 +171,42 @@ input[type="text"].focus {
 }
 
 .done {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(100, 50, 120, .6);
     -webkit-transition: all .5s;
     transition: all .5s;
 }
 
-.blue {
-    color: blue;
+#list-wrapper {
+margin: auto;
+width:640px;
 }
+
+#list {
+ margin-top: 20px;
+}
+
+#main {
+  width: 640px;
+ margin: auto;
+ margin-top: 65px;
+}
+
+#add-wrapper {
+  margin: 20px 0 20px 75px;
+}
+
+#add {
+  background-color: rgba(255,255,255,.7);
+  color: rgba(50,10,50,1);
+  padding: 5px 20px;
+  width: 440px;
+}
+
+#add:focus {
+outline: 1px solid #c4a2d9;
+background-color: #fff;
+}
+
 
 /*
 .delete, .purchased {

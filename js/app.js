@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-  $('#main').on('click', '#add-button', function () {
-        var grocery = $('#input').val();
+/*  $('#main').on('click', '#add-button', function () {
+        var grocery = $('#add').val();
         $('#list').append("<li class='item'><button class='delete'><p1></p1></button><div class='wrapper'><input type='text' value='" + grocery + "' class='entered'/><button class='purchased'><p2></p2></button></div></li>");
-    });
+    });*/
 
     $('#list').on('focus', 'input[type="text"].entered', function () {
         $(this).addClass('focus');
@@ -19,18 +19,26 @@ $(document).ready(function(){
 
     $("#list").on('click', '.purchased', function () {
         $(this).parent().toggleClass('done');
-        $('input[type="text"].entered').toggleClass('blue');
     });
 
+    $('#add').keypress(function(e) {
+    if(e.which == 13) {
+var grocery = $('#add').val();
+        $('#list').prepend("<li class='item'><button class='delete'><p1></p1></button><div class='wrapper'><input type='text' value='" + grocery + "' class='entered'/><button class='purchased'><p2></p2></button></div></li>");    }
+});
+
+
 /*
-$(".item").mouseenter(function () {
-    $(this).children(".delete").show();
+$('#list').on('mouseenter', '.item', function () {
+        $(this).children(".delete").show();
 });
 
-$(".item").mouseleave(function () {
-    $(this).children(".delete").hide();
-});
+$('#list').on('mouseleave', '.item', function () {
+        $(this).children(".delete").hide();
+}); */
 
+
+/* Show/Hide buttons 
 $(".wrapper").mouseenter(function(){
     $(this).children('.purchased').show();
 });
@@ -39,7 +47,8 @@ $(".wrapper").mouseleave(function(){
     $(this).children('.purchased').hide();
 }); */
 
-//Background Randomizer
+
+//Background Randomizer -- probably take this out, or make better images...
 var $backgroundContainer = $("#bg"), // target container for bg image
     images = [
         ['img/bg1.jpg'],
