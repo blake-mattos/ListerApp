@@ -9,6 +9,7 @@ $(document).ready(function(){
         $(this).addClass('focus');
     }).on('blur', 'input[type="text"].entered', function () {
         $(this).removeClass('focus');
+        $alert("yo");
     });
 
     $("#list").on('click', '.delete', function () {
@@ -21,12 +22,19 @@ $(document).ready(function(){
         $(this).parent().toggleClass('done');
     });
 
+$("#list").on('keypress', function(e) {
+    if(e.which == 13) {
+        $(e.target).blur();
+    }
+});
+
     $('#add').keypress(function(e) {
     if(e.which == 13) {
 var grocery = $('#add').val();
-        $('#list').prepend("<li class='item'><button class='delete'><p1></p1></button><div class='wrapper'><input type='text' value='" + grocery + "' class='entered'/><button class='purchased'><p2></p2></button></div></li>");    }
+        $('#list').prepend("<li class='item'><button class='delete'><p1></p1></button><div class='wrapper'><input type='text' value='" + grocery + "' class='entered'/><button class='purchased'><p2></p2></button></div></li>");
+        $('#add').val("");
+    }
 });
-
 
 /*
 $('#list').on('mouseenter', '.item', function () {
@@ -36,7 +44,6 @@ $('#list').on('mouseenter', '.item', function () {
 $('#list').on('mouseleave', '.item', function () {
         $(this).children(".delete").hide();
 }); */
-
 
 /* Show/Hide buttons 
 $(".wrapper").mouseenter(function(){
